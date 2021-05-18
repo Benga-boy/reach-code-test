@@ -9,4 +9,12 @@
 
 module.exports = function reverseWordsInSentence(input) {
   // TODO
+  input = input.split(' ')
+  // return input.map(word => word.split('').reverse().join('')).join(' ')
+  let reversedWord = []
+  for (let i = 0; i < input.length; i++) {
+    reversedWord.push(input[i].split('').reverse().join(''))
+  }
+  return reversedWord.join(' ')
 };
+

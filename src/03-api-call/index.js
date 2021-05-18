@@ -34,6 +34,11 @@ The expected output is:
 }
  */
 
+const fetch = require('node-fetch')
+
 module.exports = async function fetchLukeSkywalker() {
   // TODO
+  const res = await fetch('https://swapi.dev/api/people/1/')
+  const data = await res.json()
+  return data
 };

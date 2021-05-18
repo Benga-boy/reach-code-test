@@ -10,6 +10,16 @@
 // Average and worst case time complexity (Big-O) of my function is:
 // Explain:
 
+const check = require('check-types')
+
 module.exports = function sortArray(arr) {
   // TODO
+  if (!arr.every(num => Number.isInteger(num))) {
+    throw new TypeError('Invalid Input')
+  }
+  let result = []
+  for (let i = Math.min(...arr); i <= Math.max(...arr); i++) {
+    arr.forEach(num => i === num ? result.push(i) : num)
+  }
+  return result
 };

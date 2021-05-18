@@ -5,4 +5,9 @@
 
 module.exports = function createBase(integer) {
   // TODO
+  if (integer < 0) {
+    return (n) => n - -integer
+  } else if (integer > 0) {
+    return (x) => x + integer
+  }
 };
